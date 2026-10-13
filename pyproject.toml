@@ -1,0 +1,24 @@
+[project]
+name = "excel-to-pdf"
+version = "1.0.0"
+description = "High-speed parallel batch converter from Excel (.xlsx, .xls) to PDF"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pywin32>=306; sys_platform == 'win32'",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
